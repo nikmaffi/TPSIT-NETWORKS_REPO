@@ -2,6 +2,6 @@
 Repository di T.P.S.I.T. e di Sistemi e Reti
 
 Folder | Descrizione
--------|------------
-C | Cartella contenente tutti gli esercizi sul linguaggio C.
-NET | Cartella contenente tutti gli esercizi sulle reti
+-------|---------------------------------------------------------
+C      | Cartella contenente tutti gli esercizi sul linguaggio C.
+NET    | Cartella contenente tutti gli esercizi sulle reti.
