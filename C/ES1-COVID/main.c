@@ -28,7 +28,7 @@ int main(int argc, const char **argv, const char **envp)
         printf("\nErrore: Numero invalido di parametri.\n\n");
 
         printf("SYNOPSIS\n");
-        printf("\t%s  parametro_contagi  numero di alunni\n\n", argv[0]);
+        printf("\t%s  parametro_contagi  numero_alunni\n\n", argv[0]);
 
         return PARAM_ERR;
     }
