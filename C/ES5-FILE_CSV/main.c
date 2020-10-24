@@ -30,7 +30,7 @@ int main(int argc, const char **argv, const char **envp)
         printf("\nErrore: Numero invalido di parametri.\n\n");
 
         printf("SYNOPSIS\n");
-        printf("\t%s  csv_file_name\n\n", argv[0]);
+        printf("\t%s  file_csv\n\n", argv[0]);
 
         return PARAM_ERR;
     }
