@@ -26,7 +26,7 @@ int main(int argc, const char **argv, const char **envp)
         printf("\nErrore: Numero invalido di argomenti.\n\n");
 
         printf("SYNOPSIS\n");
-        printf("\t%s  end/dec  stringa\n\n", argv[0]);
+        printf("\t%s  enc/dec  stringa\n\n", argv[0]);
 
         printf("\t1 - Encoding\n");
         printf("\t2 - Decoding\n\n");
