@@ -48,6 +48,8 @@ int main(int argc, const char **argv, const char **envp)
     //Viene controllato se è possibile effettuare una lettura sul file
     if(!reading(argv[1], s))
     {
+        free(s); //Deallocazione dell'array
+        
         printf("\nErrore: Non e' possibile effettuare la lettura del file %s.\n\n", argv[1]);
 
         return FILE_ERR;
