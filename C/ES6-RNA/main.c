@@ -1,10 +1,8 @@
 #include <stdio.h> //Per funzioni di input/output
 
-#define NO_ERR 0 //Esecuzione corretta
+#define NO_ERR 0 //Esecuzione corretta del programma
 #define PARAM_ERR 1 //Esecuzione di un errore sulla chiamata del programma
 #define FILE_ERR 2 //Esecuzione di un errore sull'apertura del file
-
-#define STR_SIZE 1024 //Numero massimo di caratteri per stringa
 
 int main(int argc, const char **argv, const char **envp)
 {
@@ -31,7 +29,7 @@ int main(int argc, const char **argv, const char **envp)
         return FILE_ERR;
     }
 
-    //Si legge un byte ad ogni iterazione finche non viene restituito EOF
+    //Si legge un byte ad ogni iterazione finchè non viene restituito EOF
     while((byte = fgetc(fp)) != EOF)
     {
         //Selezione che controllo di che tipo è il carattere letto
@@ -56,7 +54,7 @@ int main(int argc, const char **argv, const char **envp)
         }
     }
 
-    fclose(fp); //Chiusura dei file
+    fclose(fp); //Chiusura del file
 
     //Stampa dei risultati
     printf("\nNel codice RNA del file %s sono presenti:\n\n");
