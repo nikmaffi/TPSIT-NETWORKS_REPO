@@ -24,7 +24,7 @@ int main(int argc, const char **argv, const char **envp)
     //Controllo di eventuali errori sull'apertura del file
     if(!(fp = fopen(argv[1], "rt")))
     {
-        printf("\nErrore: Impossibile aprire il file %s.\n\n", argv[0]);
+        printf("\nErrore: Impossibile aprire il file %s.\n\n", argv[1]);
 
         return FILE_ERR;
     }
@@ -57,7 +57,7 @@ int main(int argc, const char **argv, const char **envp)
     fclose(fp); //Chiusura del file
 
     //Stampa dei risultati
-    printf("\nNel codice RNA del file %s sono presenti:\n\n");
+    printf("\nNel codice RNA del file %s sono presenti:\n\n", argv[1]);
     printf("Citosine: %20d\n", citosine);
     printf("Guanine:  %20d\n", guanine);
     printf("Adenine:  %20d\n", adenine);
