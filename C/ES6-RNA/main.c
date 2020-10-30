@@ -58,10 +58,10 @@ int main(int argc, const char **argv, const char **envp)
 
     //Stampa dei risultati
     printf("\nNel codice RNA del file %s sono presenti:\n\n", argv[1]);
-    printf("Citosine: %20d\n", citosine);
-    printf("Guanine:  %20d\n", guanine);
-    printf("Adenine:  %20d\n", adenine);
-    printf("Timine:   %20d\n\n", timine);
+    printf("Citosine: %10d\n", citosine);
+    printf("Guanine:  %10d\n", guanine);
+    printf("Adenine:  %10d\n", adenine);
+    printf("Timine:   %10d\n\n", timine);
 
     return NO_ERR;
 }
