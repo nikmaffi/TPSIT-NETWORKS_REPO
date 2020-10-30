@@ -7,7 +7,7 @@
 int main(int argc, const char **argv, const char **envp)
 {
     FILE *fp; //Puntatore a file su cui si andranno a leggere i parametri
-    size_t citosine = 0, guanine = 0, adenine = 0, timine = 0; //Contatore di acidi nucleici
+    unsigned long citosine = 0, guanine = 0, adenine = 0, timine = 0; //Contatore di acidi nucleici
     char byte = 0; //Singolo byte letto da file
 
     //Controllo di eventuali errori sulla chiamata del programma
