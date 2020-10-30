@@ -5,3 +5,4 @@
 - [x] **Es3**: R.L.E. (Run Length Encoding)
 - [x] **Es4**: Queue F.I.F.O.
 - [x] **Es5**: File C.S.V. (Comma Separated Value)
+- [x] **Es6**: R.N.A.
