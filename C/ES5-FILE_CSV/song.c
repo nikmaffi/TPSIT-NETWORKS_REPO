@@ -17,8 +17,8 @@ char reading(const char *filename, song *s)
     FILE *fp; //Stream collegato al file
     char str[STR_SIZE]; //Stringa letta dal file
 
-    //Viene controllato se s punta a null
-    if(s == NULL)
+    //Controllo validità dei parametri
+    if(!s || !filename)
         return 0;
 
     //Viene controllato se è possibile effettuare la lettura sul file
@@ -46,6 +46,10 @@ unsigned long linecount(const char *filename)
     FILE *fp; //Stream collegato al file
     unsigned long line; //Variabile che conta le linee
     char byte; //Singolo byte letto dal file
+    
+    //Controllo validità dei parametri
+    if(!filename)
+        return 0;
 
     //Viene controllato se è possibile effettuare la lettura sul file
     if((fp = fopen(filename, "rt")) == NULL)
