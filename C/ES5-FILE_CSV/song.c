@@ -112,6 +112,8 @@ void printsong(song *s, int dim, FILE* stream)
 
         last--;
     }
+    
+    free(supp); //Rimozione dall'heap dell'array
 
     return;
 }
