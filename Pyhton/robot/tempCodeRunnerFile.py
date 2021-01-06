@@ -1,0 +1,5 @@
+wdw.listen()
+    wdw.onkey(moveRobotUp, "Up")
+    wdw.onkey(moveRobotDown, "Down")
+    wdw.onkey(moveRobotLeft, "Left")
+    wdw.onkey(moveRobotRight, "Right")
