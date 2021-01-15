@@ -1,7 +1,7 @@
 # TPSIT_REPO
-Repository di T.P.S.I.T. e di Sistemi e Reti
+Repository for T.P.S.I.T. homework.
 
-Folder | Descrizione
--------|---------------------------------------------------------
-C      | Cartella contenente tutti gli esercizi sul linguaggio C.
-NET    | Cartella contenente tutti gli esercizi sulle reti.
+Folder    | Description
+----------|-------------------------------------------------
+C         | Folder containing all C language exercises.
+PYTHON    | Folder containing all Python language exercises.
