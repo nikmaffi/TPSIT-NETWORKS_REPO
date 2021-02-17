@@ -109,11 +109,11 @@ void reverseQueue(queue* qSrc, queue* qDst)
     stack s = NULL;
     int el = 0;
 
-    while(dequeue(qSrc, &el))
-        push(&s, el);
+    while(dequeue(qSrc, &el)) //Eseguo l'operazione di deaccodamento fino a quando la coda è vuota
+        push(&s, el); //Ad ogni deaccodamento effettuo la push sullo stack
 
-    while(pop(&s, &el))
-        enqueue(qDst, el);
+    while(pop(&s, &el)) //Eseguo l'operazione di pop fino a quando lo stack è vuoto
+        enqueue(qDst, el); //Ad ogni operazione di pop effetto un accodamento nella nuova coda
 }
 
 int main()
