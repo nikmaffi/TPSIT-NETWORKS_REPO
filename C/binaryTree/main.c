@@ -39,6 +39,27 @@ short newNode(BinaryTree* bt, int key, int value) {
     return 1;
 }
 
+short findByKey(BinaryTree* bt, int key, int* value) {
+    //Funzione che ricerca il nodo di un albero mediante la chiave
+    
+    //Se il nodo in esame non esiste vuol dire che la chiave non è stata ancora utilizzata
+    if(!(*bt)) {
+        return 0;
+    }
+
+    if(key > (*bt)->key) {
+        //Se la chiave è maggiore di quella del nodo corrente allora la ricerca procede verso destra
+        findByKey(&(*bt)->right, key, value);
+    } else if(key < (*bt)->key) {
+        //Se la chiave è minore di quella del nodo corrente allora la ricerca procede verso sinistra
+        findByKey(&(*bt)->left, key, value);
+    } else {
+        //Se la chiave è uguale di quella del nodo corrente allora il nodo è stato trovato
+        *value = (*bt)->value;
+        return 1;
+    }
+}
+
 void printTree(BinaryTree bt, int tabs) {
     //Funzione che stampa l'albero binario dalla cima
 
