@@ -52,7 +52,7 @@ int playlistDim(Playlist *l);
 char push(Playlist *l, song value);
 
 //Funzione che effettua la pop sulla lista
-char pop(Playlist *l, song value);
+song pop(Playlist  *l);
 
 //Funzione che legge da un file csv dei dati (titoli di brani musicali) e li carica in s
 char reading(const char *filename, Playlist *pl);

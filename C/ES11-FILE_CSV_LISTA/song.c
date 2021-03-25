@@ -73,27 +73,44 @@ char push(Playlist *l, song value)
     return 1;
 }
 
-char pop(Playlist *pl, song value)
+song pop(Playlist *pl)
 {
     Node* pt;
+    song c = {-1, "", ""};
     int dim = 0;
 
     if(!pl)
-        return 0;
+        return c;
 
     if(!(*pl))
-        return 0;
+        return c;
 
     dim = playlistDim(pl); //Calcolo della dimesnione per scorrere la lista
 
     //Scorro la lista fino al penultimo nodo
+    if(dim == 1)
+    {
+        pt = *pl;
+        c.index = pt->value.index;
+        strncpy(c.title, pt->value.title, STR_SIZE);
+        strncpy(c.author, pt->value.author, STR_SIZE);
+        free(pt); //Deallocazione dell'ultimo nodo
+        pt = NULL; //ora il penultimo nodo punta a null
+
+        return c;
+    }
+
+    pt = *pl;
     for(int k = 0; k < dim - 1; k++)
         pt = pt->next;
 
+    c.index = pt->next->value.index;
+    strncpy(c.title, pt->next->value.title, STR_SIZE);
+    strncpy(c.author, pt->next->value.author, STR_SIZE);
     free(pt->next); //Deallocazione dell'ultimo nodo
     pt->next = NULL; //ora il penultimo nodo punta a null
 
-    return 1;
+    return c;
 }
 
 char reading(const char *filename, Playlist *pl)
@@ -186,6 +203,10 @@ void printsong(Playlist *pl, FILE* stream)
     }
 
     free(arr); //Rimozione dell'heap dell'array di supporto
+
+    //Deallocazione della lista
+    for(int k = 0; k < dim; k++)
+        printf("%d ", pop(pl).index);
 
     return;
 }
