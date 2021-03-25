@@ -71,28 +71,34 @@ short push(queue *q, int value)
 
 short pop(queue *q, int *value)
 {
-    node *tmp = q->head;
+    node *tmp = q->head; //Puntatore di supporto
 
+    //Controllo della validità dei puntatori passati come parametri
     if(q->head == NULL || q->tail == NULL)
         return 0;
 
     if(q->head == q->tail)
     {
-        *value = q->tail->value;
-        free(q->tail);
+        //Se head punta allo stesso nodo di tail
 
-        q->head = q->tail = NULL;
+        //Viene impostato il valore di ritorno
+        *value = q->tail->value;
+        free(q->tail); //Deallocazione del nodo
+
+        q->head = q->tail = NULL; //La coda ora è vuota
 
         return 1;
     }
 
+    //Si punta al nodo successivo finchè non si raggiunge il nodo puntato dalla coda
     while(tmp->next != q->tail)
         tmp = tmp->next;
 
+    //Viene impostato il valore di ritorno
     *value = q->tail->value;
-    q->tail = tmp;
-    tmp = tmp->next;
-    free(tmp);
+    q->tail = tmp; //tail punta al precedente
+    tmp = tmp->next; //tmp viene fatto puntare al nodo da distruggere
+    free(tmp); //Deallocazione del nodo
 
     return 1;
 }
